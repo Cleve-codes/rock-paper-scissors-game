@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Rock, Paper, Scissors</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" class="css" />
+    <!-- Js -->
+    <script defer src="index.js"></script>
+  </head>
+  <body>
+    <!-- Primary Container -->
+    <div class="primary">
+      <!-- Score board -->
+      <div class="score-board">
+        <div>
+          <p class="board-head">
+            Rock <br />Paper <br />
+            Scissors
+          </p>
+        </div>
+        <div class="score">
+          <p>score</p>
+          <p><span class="board-head score-value">0</span></p>
+        </div>
+      </div>
+
+      <!-- Card selection section -->
+      <div class="selection page">
+        <img src="images/bg-triangle.svg" alt="" class="connector" />
+
+        <div class="select1">
+          <div class="select card1">
+            <img src="images/icon-paper.svg" alt="" class="img-choice" />
+          </div>
+          <div class="select card2">
+            <img src="images/icon-rock.svg" alt="" class="img-choice" />
+          </div>
+        </div>
+        <div class="select1">
+          <div class="select card3">
+            <img src="images/icon-scissors.svg" alt="" class="img-choice" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Result Display -->
+      <div class="page hidden">
+        <div class="select2 result">
+          <h2>YOU PICKED</h2>
+          <h2>THE HOUSE PICKED</h2>
+        </div>
+        <div class="select2">
+          <div class="user"></div>
+          <div class="status">
+            <h2 class="message"></h2>
+            <button class="playAgain-btn">Play Again</button>
+          </div>
+          <div class="house"></div>
+        </div>
+      </div>
+    </div>
+    <!-- Rules Container-->
+    <div class="rules hidden page">
+      <div class="top">
+        <h2>Rules</h2>
+        <img src="images/icon-close.svg" alt="" class="close" />
+      </div>
+      <div class="bottom">
+        <img src="images/image-rules.svg" alt="" />
+      </div>
+    </div>
+
+    <!-- Rules Button -->
+    <div class="rulesBtn">
+      <p>Rules</p>
+    </div>
+  </body>
+</html>

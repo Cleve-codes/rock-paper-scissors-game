@@ -1,0 +1,333 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: hsl(237, 49%, 15%);
+  color: whitesmoke;
+}
+
+.primary {
+  position: relative;
+}
+
+.score-board {
+  border-radius: 15px;
+  border: 0.5px solid rgb(129, 125, 125);
+  min-height: 150px;
+  width: 750px;
+  padding: 1.75em;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 30%;
+  margin-top: 3%;
+}
+
+.board-head {
+  font-size: 35px;
+  font-weight: bolder;
+}
+
+.score {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding-left: 3em;
+  padding-right: 3em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  color: black;
+  background-color: white;
+  border-radius: 15px;
+  margin-right: 1em;
+}
+
+.score p {
+  font-size: 1.5em;
+}
+
+.score-value {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+/* Card Selection */
+.selection {
+  position: relative;
+  transition: 1s;
+}
+
+.connector {
+  position: absolute;
+  margin-left: 42%;
+  margin-top: 5%;
+  z-index: -1;
+}
+
+.select1 {
+  margin-top: 2em;
+  display: flex;
+  gap: 12em;
+  justify-content: center;
+  place-items: center;
+  z-index: 2;
+  margin-bottom: 4em;
+}
+
+.select {
+  /* position: relative; */
+  display: flex;
+  padding: 1em;
+  height: 170px;
+  width: 170px;
+  border-radius: 50%;
+  background-color: white;
+  margin: 2em;
+  z-index: 1;
+}
+
+.select img {
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  height: auto;
+}
+
+.select img:hover {
+  animation: shakeY 0.75s 1;
+  cursor: pointer;
+}
+
+/* Card 1 */
+.card1 {
+  border: 1.25em solid hsl(230, 89%, 65%);
+  transition: 0.75s;
+}
+.card1:hover {
+  box-shadow: 0 0 55px hsl(230, 89%, 65%);
+}
+
+/* card 2*/
+.card2 {
+  border: 1.25em solid hsl(40, 84%, 53%);
+  transition: 0.75s;
+}
+.card2:hover {
+  box-shadow: 0 0 55px hsl(40, 84%, 53%);
+}
+
+/* card 3 */
+.card3 {
+  border: 1.25em solid hsl(349, 70%, 56%);
+  transition: 0.75s;
+}
+.card3:hover {
+  box-shadow: 0 0 55px hsl(349, 70%, 56%);
+}
+
+/* /////////////////////////////////////////////// */
+/* Rules Container */
+.rules {
+  position: fixed;
+  padding: 1em;
+  background-color: white;
+  max-width: 400px;
+  /* margin-left: 40%;
+    margin-top: 5%; */
+  border-radius: 15px;
+  transition: 1s;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  /* position: fixed; */
+  z-index: 200;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 2em;
+}
+
+.top h2 {
+  margin-top: 1.5em;
+  margin-bottom: 2em;
+  color: hsl(270, 1%, 28%);
+  font-size: 30px;
+}
+
+/* Close button */
+.top img {
+  width: 25px;
+  height: 25px;
+  margin-top: 2.7em;
+  margin-right: 1em;
+}
+
+.bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Results DIsplay */
+.select2 {
+  display: flex;
+  gap: 1em;
+  justify-content: space-between;
+  margin-left: 30%;
+  max-width: 40%;
+  height: 100%;
+}
+
+.select2 h2 {
+  font-size: 1.25em;
+}
+
+.result {
+  margin-top: 5%;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 2em;
+}
+
+.status {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75em;
+}
+
+.status h2 {
+  font-size: 40px;
+  font-weight: bolder;
+}
+
+/* Play Again Button */
+button {
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  border-radius: 15px;
+  font-size: 1.125em;
+  font-weight: bolder;
+  color: hsl(349, 70%, 56%);
+}
+
+/* Rules Button */
+.rulesBtn {
+  /* position: absolute; */
+  margin-left: 85%;
+  margin-right: 5%;
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  border-radius: 15px;
+  border: 0.5px solid white;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bolder;
+}
+
+.rulesBtn:hover {
+  animation: shakeX 0.75s 1;
+  box-shadow: 0 0 10px white;
+  cursor: pointer;
+}
+
+/* Shake animation */
+@keyframes shakeY {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateY(-10px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateY(10px);
+  }
+}
+
+@keyframes shakeX {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+
+/* Glow animation */
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+  }
+  20% {
+    box-shadow: 0 0 1em 2em hsl(237, 49%, 23%);
+  }
+  40% {
+    box-shadow: 0 0 4em 2em hsl(220, 47%, 15%);
+  }
+  60% {
+    box-shadow: 0 0 4em 2em hsl(210, 45%, 10%);
+  }
+  100% {
+    box-shadow: 0 0 6em 4em hsl(220, 47%, 15%);
+  }
+}
+
+/* Winner Class */
+.winner {
+  animation: glow 1s infinite;
+}
+
+.loser {
+  animation: shakeX 1s 1.5;
+}
+
+/* Hide elements */
+.hidden {
+  display: none;
+}
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(4, 4, 81, 0.5);
+  z-index: 100;
+  filter: blur(5px);
+}
+
+.overlay .primary {
+  filter: brightness(0.5); /* Adjust the brightness as desired */
+  /* Add additional styles as needed */
+}
